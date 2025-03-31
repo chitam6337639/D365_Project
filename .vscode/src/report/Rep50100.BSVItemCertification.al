@@ -55,9 +55,7 @@ report 50100 "BSV Item Certification"
                 Clear(DescriptionItem);
                 if ItemRec.Get("Item Code") then
                     DescriptionItem := ItemRec.Description;
-
             end;
-
         }
     }
     requestpage
@@ -83,6 +81,5 @@ report 50100 "BSV Item Certification"
         TotalCertifications: Integer;
         TotalExpired: Integer;
         TotalActive: Integer;
-
         DescriptionItem: Text[100];
 }

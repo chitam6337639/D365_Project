@@ -56,10 +56,10 @@ page 50100 "BSV Item Certification Setup"
                 begin
                     if BSVItemCert.FindSet() then begin
                         repeat
-                            // if (BSVItemCert."Start Date" <= Today) and (BSVItemCert."End Date" >= Today) then
-                            BSVItemCert."Active" := true;
-                            // else
-                            // BSVItemCert."Active" := false;
+                            if (BSVItemCert."Start Date" <= Today) and (BSVItemCert."End Date" >= Today) then
+                                BSVItemCert."Active" := true
+                            else
+                                BSVItemCert."Active" := false;
 
                             BSVItemCert.Modify();
                         until BSVItemCert.Next() = 0;
