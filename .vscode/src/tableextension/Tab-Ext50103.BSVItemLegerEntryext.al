@@ -1,8 +1,8 @@
 namespace ALProject.ALProject;
 
-using Microsoft.Inventory.Item;
+using Microsoft.Inventory.Ledger;
 
-tableextension 50101 "BSV Item ext" extends Item
+tableextension 50103 "BSV Item Leger Entry ext" extends "Item Ledger Entry"
 {
     fields
     {
@@ -10,7 +10,6 @@ tableextension 50101 "BSV Item ext" extends Item
         {
             Caption = 'Certification Code';
             DataClassification = ToBeClassified;
-            TableRelation = "BSV Item Certification".Code where(Active = const(true), "Item Code" = field("No."));
         }
     }
 }
