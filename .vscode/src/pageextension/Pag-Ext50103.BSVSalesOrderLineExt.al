@@ -1,18 +1,17 @@
 namespace ALProject.ALProject;
 
-using Microsoft.Inventory.Ledger;
+using Microsoft.Sales.Document;
 
-pageextension 50102 "BSV Item Ledger Entries Ext" extends "Item Ledger Entries"
+pageextension 50103 "BSV Sales Order Line Ext" extends "Sales Order Subform"
 {
     layout
     {
-        addlast(Control1)
+        addafter("No.")
         {
             field("Cert No."; Rec."Cert No.")
             {
                 ApplicationArea = All;
             }
         }
-
     }
 }
